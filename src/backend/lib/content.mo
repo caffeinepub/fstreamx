@@ -396,7 +396,7 @@ module {
       case (?i) {
         let size = items.size();
         if (size > 0) {
-          let last = size - 1;
+          let last : Nat = size - 1 : Nat;
           if (i < last) {
             let lastItem = items.at(last);
             items.put(i, lastItem);

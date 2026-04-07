@@ -2,6 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { Globe, Instagram, Menu, Search, X } from "lucide-react";
 import { useState } from "react";
 import { type Language, useLanguage } from "../lib/i18n";
+import { InstallPrompt } from "./InstallPrompt";
 
 const LANG_OPTIONS: Language[] = ["EN", "HI", "UR", "ES"];
 
@@ -220,6 +221,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
+      <InstallPrompt />
     </div>
   );
 }

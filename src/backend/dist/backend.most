@@ -1,4 +1,4 @@
-// Version: 3.0.0
+// Version: 1.0.0
 type Category__457257140 = Text;
 type ContentId__949974698 = Text;
 type ContentItem__658366793 =
@@ -23,29 +23,8 @@ type Episode__867732700 =
     title : Text;
     videoUrl : ?Text
   };
-type List__415060402<T> = List__790383201<T>;
-type List__790383201<T> =
-  {
-    var blockIndex : Nat__490723111;
-    var blocks : [var [var ?T]];
-    var elementIndex : Nat__490723111
-  };
 type Nat__490723111 = Nat__920180692;
 type Nat__920180692 = Nat;
-type OldCategory__901310687 = Text;
-type OldContentId__1000202688 = Text;
-type OldContentItem__780014940 =
-  {
-    category : OldCategory__901310687;
-    description : Text;
-    duration : Text;
-    genre : Text;
-    id : OldContentId__1000202688;
-    posterUrl : Text;
-    rating : Float;
-    title : Text;
-    year : Nat
-  };
 type Part__759372368 =
   {duration : Text; partNumber : Nat; title : Text; videoUrl : ?Text};
 type Season__908702878 =
@@ -55,10 +34,7 @@ type Season__908702878 =
     seasonNumber : Nat;
     title : Text
   };
-actor ({
-  in contentItems : List__415060402<OldContentItem__780014940>;
-  in nextContentId : [var Nat]
-}, {
+actor {
   stable contentItems :
     {
       var blockIndex : Nat__490723111;
@@ -66,4 +42,4 @@ actor ({
       var elementIndex : Nat__490723111
     };
   stable nextContentId : [var Nat]
-}) ;
+};

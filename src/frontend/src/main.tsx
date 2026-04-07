@@ -16,6 +16,15 @@ declare global {
 
 const queryClient = new QueryClient();
 
+// Register service worker for PWA install support (production only)
+if (import.meta.env.PROD && "serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js", { scope: "/" }).catch((err) => {
+      console.warn("Service worker registration failed:", err);
+    });
+  });
+}
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <QueryClientProvider client={queryClient}>
     <InternetIdentityProvider>

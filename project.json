@@ -1,0 +1,27 @@
+{
+  "overview": "FStreamX is a Netflix-style OTT streaming platform with a dark cinematic UI featuring horizontal scrolling content rows, auto-rotating hero banner, hover-expand cards, and a full seasons/episodes/parts system for TV shows, anime, and dramas.",
+  "features": [
+    "Netflix-style horizontal scrolling category rows with arrow navigation",
+    "Auto-rotating hero banner with manual carousel dots",
+    "Hover-expand cards with title, genre, rating, and action overlays",
+    "Seasons/episodes/parts system for TV shows, anime, and dramas",
+    "Admin panel to manage seasons, episodes, and parts",
+    "Content detail page with season dropdown, episode list, and part selector",
+    "Multi-language support (English, Hindi, Urdu, Spanish)",
+    "Real-time search across all categories",
+    "Watchlist and favorites system",
+    "Instagram ID displayed in footer with logo"
+  ],
+  "category": "entertainment",
+  "tags": [
+    "streaming",
+    "ott",
+    "netflix-style",
+    "movies",
+    "anime",
+    "dramas",
+    "music",
+    "dark-theme"
+  ],
+  "last_updated": "2026-04-07T18:57:06.972Z"
+}

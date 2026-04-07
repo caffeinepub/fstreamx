@@ -1,0 +1,59 @@
+type Season = 
+ record {
+   description: text;
+   episodes: vec Episode;
+   seasonNumber: nat;
+   title: text;
+ };
+type Part = 
+ record {
+   duration: text;
+   partNumber: nat;
+   title: text;
+   videoUrl: opt text;
+ };
+type Episode = 
+ record {
+   description: text;
+   duration: text;
+   episodeNumber: nat;
+   parts: opt vec Part;
+   title: text;
+   videoUrl: opt text;
+ };
+type ContentItem = 
+ record {
+   category: Category;
+   description: text;
+   duration: text;
+   genre: text;
+   id: ContentId;
+   posterUrl: text;
+   rating: float64;
+   seasons: opt vec Season;
+   title: text;
+   year: nat;
+ };
+type ContentInput = 
+ record {
+   category: Category;
+   description: text;
+   duration: text;
+   genre: text;
+   posterUrl: text;
+   rating: float64;
+   seasons: opt vec Season;
+   title: text;
+   year: nat;
+ };
+type ContentId = text;
+type Category = text;
+service : {
+  addContent: (input: ContentInput) -> (ContentId);
+  deleteContent: (id: ContentId) -> (bool);
+  getAllContent: () -> (vec ContentItem) query;
+  getContentByCategory: (category: Category) -> (vec ContentItem) query;
+  getContentById: (id: ContentId) -> (opt ContentItem) query;
+  searchContent: (term: text) -> (vec ContentItem) query;
+  updateContent: (id: ContentId, input: ContentInput) -> (bool);
+}
